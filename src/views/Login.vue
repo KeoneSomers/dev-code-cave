@@ -32,7 +32,6 @@ export default {
                 .auth()
                 .signInWithEmailAndPassword(this.email, this.password)
                 .then(() => {
-                    alert('Successfully logged in');
                     this.$router.push('/dashboard');
                 })
                 .catch(error => {

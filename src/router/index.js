@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Login from '../views/Login.vue';
 import firebase from 'firebase';
 
 Vue.use(VueRouter);
@@ -8,20 +7,23 @@ Vue.use(VueRouter);
 const routes = [
     {
         path: '/',
+        name: 'Welcome',
+        component: () => import('../views/Welcome.vue'),
+    },
+    {
+        path: '/login',
         name: 'Login',
-        component: Login,
+        component: () => import('../views/Login.vue'),
     },
     {
         path: '/register',
         name: 'Register',
-        component: () =>
-            import('../views/Register.vue'),
+        component: () => import('../views/Register.vue'),
     },
     {
         path: '/dashboard',
         name: 'Dashboard',
-        component: () =>
-            import('../views/Dashboard.vue'),
+        component: () => import('../views/Dashboard.vue'),
         meta: {
             authRequired: true,
         },
