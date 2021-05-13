@@ -1,7 +1,6 @@
 <template>
     <div>
         <form @submit.prevent="login">
-            <h2>Login</h2>
             <input
                 type="email"
                 placeholder="Email address..."
@@ -20,7 +19,7 @@
 <script>
 import firebase from 'firebase';
 export default {
-    name: 'Home',
+    name: 'Login',
     data() {
         return {
             email: '',

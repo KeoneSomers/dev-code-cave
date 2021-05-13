@@ -1,7 +1,6 @@
 <template>
     <div>
         <form @submit.prevent="register">
-            <h2>Register</h2>
             <input
                 type="email"
                 placeholder="Email address..."
